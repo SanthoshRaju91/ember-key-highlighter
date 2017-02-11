@@ -1,0 +1,38 @@
+<h1>Hello World</h1>
+
+{{input value=keyword placeholder="Enter keyword to highlight"}}
+<br>
+
+{{keyword}}
+<br>
+
+{{highlighter 'context' keyword}}
+
+<div class="context">
+
+  The first line creates an instance of the Hilitor class, specifying that the area to be scanned is the  #content element on the page. If we don't supply a valid id then the script will scan  document.body, but it's better to limit it to just your content area to avoid highlighting appearing in the page header, menu or footer.
+
+  The tag used by default to apply highlighting to matched words is the  EM (emphasis) tag. We can change that if we want by passing a second parameter with a different tag name. You can use any tag that renders inline - so not a DIV or similar block element which would break the layout.
+
+  Calling the apply method passes the words to be highlighted to the just instantiated object which traverses the DOM inside the selected node looking for text that matches any of the keywords.
+
+  When a match is found, the text node in question is split up and a tag with style settings applied to the matching words. Each word is assigned a colour from the array supplied in the script which is then used throughout the document for that word.
+
+  To remove the highlighting from the page we simply call (from a link, script or button):
+
+</div>
+
+<div class="another-context">
+
+  The first line creates an instance of the Hilitor class, specifying that the area to be scanned is the  #content element on the page. If we don't supply a valid id then the script will scan  document.body, but it's better to limit it to just your content area to avoid highlighting appearing in the page header, menu or footer.
+
+  The tag used by default to apply highlighting to matched words is the  EM (emphasis) tag. We can change that if we want by passing a second parameter with a different tag name. You can use any tag that renders inline - so not a DIV or similar block element which would break the layout.
+
+  Calling the apply method passes the words to be highlighted to the just instantiated object which traverses the DOM inside the selected node looking for text that matches any of the keywords.
+
+  When a match is found, the text node in question is split up and a tag with style settings applied to the matching words. Each word is assigned a colour from the array supplied in the script which is then used throughout the document for that word.
+
+  To remove the highlighting from the page we simply call (from a link, script or button):
+
+</div>
+{{outlet}}
